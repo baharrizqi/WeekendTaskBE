@@ -119,7 +119,7 @@ public class ProductController {
 		findProduct = new ObjectMapper().readValue(productString, Product.class);
 		Date date = new Date();
 		String fileExtension = file.getContentType().split("/")[1];
-		String newFileName = "PROD-" + date.getTime() + "." + fileExtension;
+		String newFileName = "PRODUK-" + date.getTime() + "." + fileExtension;
 		String fileName = StringUtils.cleanPath(newFileName);
 		Path path = Paths.get(StringUtils.cleanPath(uploadPath) + fileName);
 		try {
